@@ -1,5 +1,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
   *{
     padding: 0;
@@ -19,7 +20,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #7566fad2;
+    background-color: #7168c9d2;
     font-family: 'Black Han Sans', sans-serif;
     position: relative;
 }
@@ -28,14 +29,17 @@ header div{
     font-size: 40px;
     padding: 30px;
     color: #e2e2e2;
-    text-shadow: 7px 7px 11px black;
+    
     
 }
 .main1{
     background-image: url(배경.jpg);
     background-size: cover;
     width: 100%;
-    height: 900px;
+    height: 890px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
 }
 .main1::before{
     content: "";
@@ -52,11 +56,11 @@ header div{
 .menu{
     width: 1500px;
     height: 150px;
-    margin: 0 auto;
-    margin-top: 30px;
-    display: flex;
+    margin : 200px;
+    /* display: flex; */
     justify-content: space-around;
     font-family: 'Black Han Sans', sans-serif;
+    line-height: 150px;    
 }
 
 a{  
@@ -69,5 +73,13 @@ a{
 a:hover{
     color: rgb(246, 255, 161);
     font-display:inherit;
-    transform:rotateX(20deg)
+    transition: 0.4s;
+    text-shadow: 7px 7px 11px black;
+}
+.hi{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 80px;
+    color :white;
+    position: relative;
+    
 }
