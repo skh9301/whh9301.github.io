@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVER</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.naver.com/favicon.ico?1">
+    <meta name="description" content="네이버 메인에서 다양한 정보와 유용한 컨텐츠를 만나 보세요">
+    <meta property="og:image" content="https://s.pstatic.net/static/www/mobile/edit/2016/0705/mobile_212852414260.png">
+    <link rel="stylesheet" href="naverstyle.css">
+</head>
+<body>
+    <script>
+                // When the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Select all elements with the class 'news-stand-tab-text'
+            const tabs = document.querySelectorAll('.news-stand-tab-text');
+
+            // Loop through these elements
+            tabs.forEach(tab => {
+                // Add a click event listener to each tab
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default action of the click
+
+                    // Reset 'aria-selected' for all tabs
+                    tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+
+                    // Set 'aria-selected' to true for the clicked tab
+                    this.setAttribute('aria-selected', 'true');
+                });
+            });
+        });
+
+    </script>
+    <div class="wrapper">
+        <div class="head-menu">
+            <div class="header">
+                <!-- <div class="top-search">
+
+                </div>
+                <div class="search-bar">
+
+                </div> -->
+                <div class="left-nav">
+                    <button class="menu-icon" onclick="location.href='https://www.naver.com/more.html'"></button>
+                </div>
+                <div class="left-nav-pay">
+                    <button class="pay-icon" onclick="location.href='https://new-m.pay.naver.com/pcpay?page=1'"></button>
+                </div>
+                <div class="search-area">
+                    <div class="search-group">
+                            <img class="naver-logo" src="https://s.pstatic.net/static/www/mobile/edit/20230516_0/upload_1684217675277OZzsu.gif" width="50" height="50" alt="naver">
+                            <form class="search-form" action="https://search.naver.com/search.naver" method="get">
+                                <fieldset class="search-fieldset">
+                                    <div class="search-input-box">
+                                        <input class="search-input" type="search" name="query" placeholder="검색어를 입력해 주세요." >
+                                    </div>
+                                </fieldset>
+                                <img class="keyboard" src="images/keyboardImage.png" alt="" width="50" height="50">
+                                <button type="submit" class="submit-search"></button>
+                            </form>
+                    </div>
+                </div>
+                <div class="right-nav">
+                    <button class="notif-icon" onclick=""></button>
+                </div>
+                <div class="right-nav-talk">
+                    <button class="talk-icon" onclikc=""></button>
+                </div>
+                <div class="shortcut-area">
+                    <ul class="shortcut-list">
+                        <li class="shortcut-item">
+                            <a href="https://mail.naver.com/"><img src="images/mailIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://section.cafe.naver.com/ca-fe/home"><img src="images/cafeIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0"><img src="images/blogIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://shopping.naver.com/home"><img src="images/shoppingIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://news.naver.com/"><img src="images/newsIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://finance.naver.com/"><img src="images/stocksIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://land.naver.com/"><img src="images/estateIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://map.naver.com/p?c=15.00,0,0,0,dh"><img src="images/mapIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://comic.naver.com/index"><img src="images/webtoonIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://chzzk.naver.com/"><img src="images/streamIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                        <li class="shortcut-item">
+                            <a href="https://www.naver.com/more.html"><img src="images/menuIcon.png" alt="" width="55px" height=""></a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="root">
+                <div class="left-table-layout">
+                    <div class="left-content-table">
+                        <div class="banner">
+                            <div class="ad-board">
+                                <div class="ad-frame">
+                                    <a href="https://www.jetbrains.com/ko-kr/idea/download/?section=mac"><img class="ad-image" src="images/ad-image.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-stand-wrap">
+                            <div class="news-stand">
+                                <div class="news-stand-header">
+                                    <div class="ul-news-stand">
+                                        <li class="news-stand-module">
+                                            <span class="news-stand-tab">
+                                                <a class="news-stand-tab-text" href="#" aria-selected="true">뉴스스탠드</a>
+                                                <p class="news-stand-tab-text-devider"></p>
+                                                <a class="news-stand-tab-text" href="#" role="tab" aria-selected="false">언론사편집</a>
+                                            </span>
+                                        </li>
+                                    </div>
+                                    <a href="https://sports.news.naver.com/kfootball/index" class="news-stand-module-event">
+                                        <img src="https://s.pstatic.net/static/www/mobile/edit/20240110_1095/upload_17048514254674MZPF.png" height="19" alt="2023 카타르 아시안컵">
+                                    </a>
+                                </div>
+                                <div class="news-stand-subview">
+                                    <div class="news-stand-subview-right">
+                                        <a class="news-stand-link" href="newsstand.html">뉴스스탠드</a>
+                                        <a class="news-stand-home" href="">뉴스홈</a>
+
+                                    </div>
+                                </div>
+                                <div class="news-stand-mainview">
+                                    <div class="news-stand-subscription-frame">
+                                        <!-- devide rows -->
+                                        <i class="sub-frame-row-line1"></i>
+                                        <i class="sub-frame-row-line2"></i>
+                                        <i class="sub-frame-row-line3"></i>
+                                        <!-- devide columns -->
+                                        <i class="sub-frame-column-line1"></i>
+                                        <i class="sub-frame-column-line2"></i>
+                                        <i class="sub-frame-column-line3"></i>
+                                        <i class="sub-frame-column-line4"></i>
+                                        <i class="sub-frame-column-line5"></i>
+                                    </div>
+                                    <div class="news-stand-subscription-group">
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/003.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-right"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <!-- line2 -->
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/003.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-right"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <!-- line3 -->
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/003.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-right"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <!-- line4 -->
+                                        <div class="news-icon-frame-bottom"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/003.png" alt=""></a></div>
+                                        <div class="news-icon-frame-bottom"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-bottom"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-bottom"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-bottom"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                        <div class="news-icon-frame-bottom-right"><a class="news-sub-link" href=""><img class="news-sub-link-image" src="https://s.pstatic.net/static/newsstand/2020/logo/light/0604/215.png" alt=""></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="webtoon-content-wrap">
+                            <div class="webtoon-content-header">
+                                <div class="webtoon-content-header-view">
+                                    <ul class="webtoon-content-header-tab-list">
+                                        <li class="webtoon-content-header-tab-item-first">
+                                            <a class="webtoon-content-header-tab-item-text-selected" href="#">웹툰</a>
+                                        </li>
+                                        <li class="webtoon-content-header-tab-item">
+                                            <a class="webtoon-content-header-tab-item-text" href="">자동차</a>
+                                        </li>
+                                        <li class="webtoon-content-header-tab-item">
+                                            <a class="webtoon-content-header-tab-item-text" href="">패션뷰티</a>
+                                        </li>
+                                        <li class="webtoon-content-header-tab-item">
+                                            <a class="webtoon-content-header-tab-item-text" href="">레시피</a>
+                                        </li>
+                                        <li class="webtoon-content-header-tab-item">
+                                            <a class="webtoon-content-header-tab-item-text" href="">리빙</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="webtoon-feed-header">
+                                <ul class="webtoon-feed-header-subview">
+                                    <li class="webtoon-feed-header-subview-item">
+                                        <a href="webtoon_mon.html" class="webtoon-feed-header-subview-item-text-sel">웹툰홈</a>
+                                    </li>
+                                    <li class="webtoon-feed-header-subview-item">
+                                        <a href="" class="webtoon-feed-header-subview-item-text">요일별웹툰</a>
+                                    </li>
+                                    <li class="webtoon-feed-header-subview-item">
+                                        <a href="" class="webtoon-feed-header-subview-item-text">베스트도전</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="webtoon-feed-area">
+                                <div class="feed-box">
+                                    <div class="webtoon-feed-area-title">
+                                        <strong class="webtoon-feed-area-title-strong">금요웹툰</strong>
+                                    </div>
+                                    <ul class="six-column-webtoon-poster">
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="six-column-webtoon-poster-item">
+                                            <a  class="six-column-webtoon-poster-item-a" href="https://comic.naver.com/webtoon/list?titleId=819217">
+                                                <div class="six-column-webtoon-poster-item-thumbnail">
+                                                    <span class="webtoon-thumbnail-img-view" style="width: 100%; height: 140px;">
+                                                        <img class="webtoon-thumbnail-img-src" src="https://s.pstatic.net/dthumb.phinf/?src=%22https%3A%2F%2Fshared-comic.pstatic.net%2Fthumb%2Fwebtoon%2F819217%2Fthumbnail%2Fthumbnail_IMAG21_2dd78d6c-ba3d-4d1d-8b98-30c13d90144d.jpg%22&type=nf216_280&service=navermain" alt="" width="100%" height="140">
+                                                    </span>
+                                                </div>
+                                                <strong class="six-column-webtoon-poster-title">
+                                                    12시네점심
+                                                </strong>
+                                                <div class="six-column-webtoon-poster-subtitle-wrap">
+                                                    <span class="six-column-webtoon-poster-subtitle">조석</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div style="width: 100%; height:50px; background-color: #f5f7f8;">
+                                    <a href="https://fooding.io/?utm_source=naver&utm_medium=cpc&utm_campaign=7000-1&NaPm=ci%3D22soii-n8iRaCD1tDxhr5nOQ%7Ctr%3Dgfa%7Cct%3Dls4adiq3%7Chk%3Dd0083d7ee10cc2fe73a00c0817d0721c6dc98a0f#simple-request" style="margin-right: 50px; display: block; height: 100%; text-decoration: none;">
+                                        <div class="webtoon-ad-area">
+                                            <div class="webtoon-ad-thumb-area">
+                                                <img src="https://naverpa-phinf.pstatic.net/MjAyMzEwMzBfMjQw/MDAxNjk4NjU5MDU0NzAz.iZ_nzyKX98rysUPVRxv1nzrbcd9bTLj1NdISMJD5VGEg.Xc2wcUBcGJTLTP4O4QOzRLMWdTQ8bQAoDQCCbe85mYAg.PNG/%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C%EB%B0%B0%EB%84%88_342x228_169865905468414218651753276358997.png" width="51" height="34">
+                                            </div>
+                                            <div class="webtoon-ad-content-area">
+                                                <strong class="webtoon-ad-title">기업 사내식 복지를 7000원부터</strong>
+                                                <span class="webtoon-ad-context">
+                                                    매일 다양한 맛집메뉴
+                                                </span>
+                                            </div>
+                                            <div class="webtoon-ad-landing-area">
+                                                더 알아보기
+                                                <svg class="icon_svg" width="7" height="12" viewbox="0 0 7 12">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path stroke="#888" stroke-width="1.6" d="m.6 1 5 5-5 5"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="feed-box">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-table-layout">
+                    <div class="right-content-table">
+                        <div class="right-layout-module">
+                            <div class="login-content-area">
+                                <div class="login-view">
+                                    <p class="login-view-text">네이버를 더 안전하고 편리하게 이용하세요</p>
+                                    <a class="login-button" href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/">
+                                        <i class="naver-logo-login">
+                                        </i>
+                                        로그인
+                                    </a>
+                                    <div class="login-more">
+                                        <a class="login-more-search-id" href="https://nid.naver.com/user2/help/idInquiry?lang=ko_KR">
+                                            아이디 찾기
+                                        </a>
+                                        <a class="login-more-search-pw" href="https://nid.naver.com/user2/help/pwInquiry?lang=ko_KR">
+                                            비밀번호 찾기
+                                        </a>
+                                        <a class="login-more-join" href="https://nid.naver.com/user2/join/agree?lang=ko_KR&domain=null">
+                                            회원가입
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calender-content-area">
+                                <div class="calender-container">
+                                    <header class="calender-header">
+                                        <div>
+                                            <a class="C" href="./calendar.html" target="_blank"><b>캘린더</b></a>
+                                        </div>
+                            
+                                        <div class="img1">
+                                        <img src="images/잠금.png" width="30px">
+                                        </div>
+                                    </header>
+                            
+                                    <main class="calendar-main">
+                                        <section class="sec1">
+                                        <div class="date">
+                                            <a class="C" href="./calendar.html" target="_blank"><p class="month">1.30</p></a>
+                                            <a class="C" href="./calendar.html" target="_blank"><p class="week">화</p></a>
+                                        </div>
+                                        <p style="color: gray;">일정이 없습니다.</p>
+                                        </section>       
+                                    
+                                        <section class="sec2">
+                                            <a class="C" href="./calendar.html" target="_blank"><img src="images/캘린더.png"></a>
+                                        </section>
+                                    </main>
+                                </div>  
+                            </div>
+                            <div class="memo-content-area">
+                                <div class="mainmemo">
+                                    <ul class="mainmemo-wrap">
+                                        <li class="box1"><a class="M" href="memo.html" target="_blank">메모</a></li>
+                                        <li class="box2"><img class="memostar" src="images/메모_별.png">당신의 기억을 기록합니다. 기억해야할...</li>
+                                        <li class="box3"></li>
+                                        <li class="box4"><a class="M" href="memo.html" target="_blank"><img class="memowrite" src="images/메모작성아이콘.png" width="18px"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="move-to-top">
+            <a href="#" class="move-to-top-button-a">
+                <span class="blind-move-to-top"></span>
+            </a>
+        </div>
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-notice-area">
+                    <div class="notice-box">
+                        <h3 style="margin-top: 0; margin-bottom: 0; margin-right: 11px; padding: 0;"><a href="https://www.naver.com/NOTICE" style="color: black; text-decoration: none; font-weight: bolder; cursor: pointer; font-size: 16px;">공지사항</a></h3>
+                        <a href="https://www.naver.com/NOTICE/wwwpc/14918?lang=ko&sectionId=" class="notice-msg">네이버 개인정보 처리방침 내역 변경에 대한 안내 말씀드립니다.</a>
+                    </div>
+                </div>
+                <div class="footer-corp-area">
+                    <ul class="list-corp">
+                        <li corp-item><a href="" style="color: #404040;">회사소개</a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;">인재채용</a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;">제휴제안</a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;">이용약관</a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;"><strong>개인정보처리방침</strong></a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;">청소년보호정책</a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;">네이버 정책</a></li>
+                        <p class="empty-list-item"></p>
+                        <li corp-item><a href="" style="color: #404040;">고객센터</a></li>
+                        <address class="addr">
+                            <a href="https://www.navercorp.com/" style="text-decoration: none; color: black; font-weight: bolder;">ⓒ NAVER Corp.</a>
+                        </address>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
