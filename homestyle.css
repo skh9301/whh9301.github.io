@@ -12,6 +12,25 @@
     height: 1900px;
     
 }
+.main1{
+    background-image: url(배경.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+.main1::before{
+    content: "";
+    background-size: cover;
+    position:absolute;
+    top:0px;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: black;
+    opacity: 0.7;
+}
 header{
     width:100%;
     height: 100px;
@@ -24,62 +43,257 @@ header{
     font-family: 'Black Han Sans', sans-serif;
     position: relative;
 }
-
-header div{
-    font-size: 40px;
-    padding: 30px;
-    color: #e2e2e2;
-    
-    
+header img{
+    margin-right:20px;
+    margin-bottom: 7px;
 }
-.main1{
-    background-image: url(배경.jpg);
-    background-size: cover;
-    width: 100%;
-    height: 890px;
+.home{
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
+    height: 50px;
 }
-.main1::before{
-    content: "";
-    /* background-repeat: no-repeat; */
-    background-size: cover;
-    position:absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-    background-color: black;
-    opacity: 0.7;
+.about{
+    display: flex;
+    align-items: center;
 }
+.projects{
+    display: flex;
+    align-items: center;
+}
+header div{
+    font-size: 30px;
+    padding-bottom: 30px;
+    color: #e2e2e2;
+}
+
 .menu{
-    width: 1500px;
+    width: 1000px;
     height: 150px;
     margin : 200px;
-    /* display: flex; */
-    justify-content: space-around;
+    position: relative;
     font-family: 'Black Han Sans', sans-serif;
     line-height: 150px;    
+    overflow: hidden; 
 }
-
+.menu1{
+    width: 1500px;
+    height: 150px;
+    position: relative;
+    bottom: 180px;
+    left: 200px;
+    font-family: 'Black Han Sans', sans-serif;
+    line-height: 150px; 
+    overflow: hidden;   
+}
 a{  
     color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
-    perspective: 200px;
+    padding-top: 30px;
+    display:flex;
+    align-items: center;
 
 }
-a:hover{
-    color: rgb(246, 255, 161);
+.home:hover{
+    color: rgb(63, 195, 212);
+    font-display:inherit;
+    transition: 0.4s;
+    text-shadow: 7px 7px 11px black;
+    background-color: rgb(175, 91, 196);
+    padding-left: 50%;
+    width: 300px;
+}
+.about:hover{
+    color: rgb(111, 235, 229);
     font-display:inherit;
     transition: 0.4s;
     text-shadow: 7px 7px 11px black;
 }
+.projects:hover{
+    color: rgb(108, 72, 133);
+    font-display:inherit;
+    transition: 0.4s;
+    text-shadow: 7px 7px 11px black;
+}
+ul{
+    list-style:none;
+}
 .hi{
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 80px;
+    font-size: 90px;
     color :white;
     position: relative;
+    /* border: 2px solid white; */
+    animation: hi 19s  ease-out;
     
+  
+}
+.hi_a{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 90px;
+    color :white;
+    position: relative;
+    /* border: 2px solid white; */
+    animation: hi_a 5s  ease-in;
+    position:absolute;
+    top: 130px;
+}
+.hi_b{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 90px;
+    color :white;
+    position: relative;
+    /* border: 2px solid white; */
+    animation: hi_b 5s  ease-in;
+    animation-delay: 4.5s;
+    position:absolute;
+    top: 130px;
+}
+.hi_c{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 90px;
+    color :white;
+    position: relative;
+    /* border: 2px solid white; */
+    animation: hi_c 5s  ease-in;
+    animation-delay: 9s;
+    position:absolute;
+    top: 130px;
+}
+.hi_d{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 90px;
+    color :white;
+    position: relative;
+    /* border: 2px solid white; */
+    animation: hi_d 5s  ease-in;
+    animation-delay: 0.5s;
+    position:absolute;
+    top: 130px;
+}
+.hi_e{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 90px;
+    color :white;
+    position: relative;
+    /* border: 2px solid white; */
+    animation: hi_e 5s  ease-in;
+    animation-delay: 5s;
+    position:absolute;
+    top: 130px;
+}
+.hi_f{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 90px;
+    color :white;
+    line-height: 180px;
+    /* border: 2px solid white; */
+    animation: hi_f 5s  ease-in;
+    animation-delay: 9.5s;
+    position:absolute;
+    top: 130px;
+}
+/* 메인2 시작 */
+.main2{
+    width: 100%;
+    height: 600px;
+}
+.main2_header{
+    width: 300px;
+    height: 90px;
+    font-size: 80px;
+    margin: 80px;
+    margin-left: 39%;
+    padding-bottom: 20px;
+    font-family: 'Black Han Sans', sans-serif;
+    border-bottom: 2px solid;
+    text-align: center;
+}
+.main2_mid{
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    font-size: 30px;
+    margin-left:16%
+}
+.main2_mid table{
+    text-align: center;
+    /* border:2px solid; */
+}
+
+td{
+    padding: 30px;
+}
+tr{
+    display:flex;
+}
+th{
+    border:1px solid;
+    height: 40px;
+    width: 300px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    /* margin: 30px; */
+}
+.box1{
+    border:1px solid blue;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box1 img{
+    border: 1px solid red;
+    margin-top: 20px;
+    
+}
+/* 텍스트 키프레임 */
+
+@keyframes hi_a {
+    0%{opacity: 0; translate: 0px 0px;}
+    25%{opacity: 1; translate: 0px -140px;}
+    75%{opacity: 1; translate: 0px -140px;}
+    100%{opacity: 0; translate: 0px -260px;}
+}
+@keyframes hi_b {
+    0%{opacity: 0; translate: 0px 0px;}
+    25%{opacity: 1; translate: 0px -140px;}
+    75%{opacity: 1; translate: 0px -140px;}
+    100%{opacity: 0; translate: 0px -260px;}
+}
+@keyframes hi_c {
+    0%{opacity: 0; translate: 0px 0px;}
+    25%{opacity: 1; translate: 0px -140px;}
+    75%{opacity: 1; translate: 0px -140px;}
+    100%{opacity: 0; translate: 0px -260px;}
+}
+@keyframes hi_d {
+    0%{opacity: 0; translate: 0px 0px;}
+    25%{opacity: 1; translate: 0px -140px;}
+    70%{opacity: 1; translate: 0px -140px;}
+    100%{opacity: 0; translate: 0px -260px;}
+}
+@keyframes hi_e {
+    0%{opacity: 0; translate: 0px 0px;}
+    25%{opacity: 1; translate: 0px -140px;}
+    70%{opacity: 1; translate: 0px -140px;}
+    100%{opacity: 0; translate: 0px -260px;}
+}
+@keyframes hi_f {
+    0%{opacity: 0; translate: 0px 0px;}
+    25%{opacity: 1; translate: 0px -140px;}
+    70%{opacity: 1; translate: 0px -140px;}
+    100%{opacity: 0; translate: 0px -260px;}
+}
+/* 텍스트 깜빡임 */
+@keyframes hi{
+    0%{opacity: 0;}
+    80%{opacity: 0;}
+    95%{opacity: 1;}
+    97%{opacity: 0;}
+    100%{opacity: 1;}
 }

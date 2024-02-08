@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뉴스스탠드</title>
+    <style>
+              @font-face {
+        font-family: "JalnanGothic";
+
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff")
+          format("woff");
+
+        font-weight: normal;
+
+        font-style: normal;
+      }
+        body{
+            background-image: url(images//바닥질감.jpg);
+            /* min-height: 810px; */
+            margin: 0;
+            padding: 0;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+        .center-container{
+            position: absolute;
+            top: 150px;
+            bottom: 51px;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            zoom: 1;
+        }
+        a:link{
+            color:black
+        }
+        a:visited{
+            color:rgb(51, 51, 51);
+        }
+        a{
+            text-decoration-line: none;
+        }
+        a:hover{
+            text-decoration-line:underline;
+        }
+        .wrap{
+            position: relative;
+            min-width: 1152px;
+            height: 100%;
+            /* margin-top: 50px; */
+        }
+        .container{
+            /* position: absolute;
+            left: 0;
+            top: 50%; */
+            width: 100%;
+            /* min-height: 8px; */
+            /* margin-top: -290px; */
+            z-index: 20;
+            background-image: url(images/템플릿.png);
+            background-repeat: no-repeat;
+            background-size: 1100px 560px;
+            background-position: center;
+
+        }
+        section{
+            /* position:relative; */
+            width:50%;
+            min-width:1003px;
+            height: 560px;
+            min-height: 560px;
+            margin: 0 auto;
+            white-space: nowrap;
+            
+            z-index: 0;
+        }
+        header{
+            border-bottom: 3px dashed rgb(87, 87, 87); 
+            padding: 20px;
+        }
+        button{
+            width: 100px;
+            font-size: small;
+            border-color: rgb(134, 134, 134);
+            border-radius: 25px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 5px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(87, 87, 87);
+            color: white;
+            font-weight: bold;
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 0 0;
+        }
+        .left{
+            width: 275px;
+            height: 100%;
+            border-right: 1px solid black;
+            padding-right:10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .center{
+            width: 275px;
+            height: 100%;
+            padding: 0 10px;
+            border-right: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .right{
+            width: 275px;
+            height: 100%;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .daily{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .button{
+
+        }
+        .header-wrapper{
+            display: flex;
+            justify-content: space-between;
+            /* align-items: stretch; */
+        }
+
+        /* 아래부터 황희님 스타일 */
+        /* 아래부터 황희님 스타일 */
+        /* 아래부터 황희님 스타일 */
+
+        .header2 {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 4px 4px;
+
+        width: 100%;
+
+        /* position: relative; */
+
+        height: 50px;
+
+        box-shadow: 0px 2pt 10px;
+
+        min-width: 1003px;
+
+        font-family: "JalnanGothic";
+
+
+      }
+
+      .header_box {
+        display: flex;
+
+        align-items: center;
+      }
+
+      /* 뉴스스텐드박스 */
+
+      .header_fon1 {
+        color: rgb(34, 29, 29);
+      }
+
+      .header_fon2 {
+        color: rgb(110, 110, 110);
+      }
+
+      .header_fon3 {
+        color: rgb(105, 78, 19);
+        font-weight: bold;
+        margin-left: 10px;
+
+        font-size: 12px;
+      }
+
+      .header_box1 {
+        width: 360px;
+
+        padding: 5px;
+
+        display: flex;
+
+        justify-content: space-around;
+
+        align-items: center;
+
+        font-size: 11px;
+      }
+
+      /* 로그인박스 */
+      .bor{
+        border-radius: 3px;
+
+        box-shadow: 0px 0px 3px 0px;
+
+        background-color : transparent;
+
+        border : none;
+
+        cursor : pointer;
+
+        width:60px;
+
+        height: 25px;
+        }
+
+      .header_bor {
+        height: 40px;
+
+        width: 90px;
+
+        cursor: pointer;
+
+        font-family: "JalnanGothic";
+
+        border-radius: 3px;
+
+        box-shadow: 0px 0px 3px 0px;
+
+        background-color: transparent;
+
+        border: none;
+
+        color:rgb(117, 84, 35);
+      }
+
+      .header_fon4 {
+        color: rgb(121, 121, 121);
+
+        margin-top: 2px;
+      }
+
+      main {
+        /* border: 1px solid greenyellow; */
+
+        width: 100%;
+
+        height: 640px;
+
+        display: flex;
+
+        justify-content: center;
+
+        /* position: absolute; */
+
+        /* flex-direction: column; */
+      }
+
+      .main_sub {
+        height: 150px;
+
+
+      }
+
+      .main_box {
+        width: 100%;
+
+        height: 40px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+      }
+
+      .main_fon {
+        color: rgb(121, 121, 121);
+
+        margin-top: 10px;
+      }
+
+      .main_bor {
+        cursor: pointer;
+
+        font-family: "JalnanGothic";
+
+        border: none;
+
+        background-color: transparent;
+
+        height: 30px;
+
+        width: 90px;
+
+        margin-top: 10px;
+
+        border-radius: 5px;
+
+        font-size: 10px;
+
+        color: rgb(85, 72, 57);
+      }
+
+      .main_bor:active {
+        background-color: rgb(165, 135, 115);
+
+        box-shadow: 1px 1px 2px inset;
+      }
+
+      .main_bor1 {
+        height: 40px;
+
+        width: 90px;
+
+        cursor: pointer;
+
+        font-family: "JalnanGothic";
+
+        border: none;
+
+        background-color: transparent;
+
+        height: 30px;
+
+        width: 60px;
+
+        border-radius: 2px;
+
+        margin-top: 10px;
+
+        font-size: 10px;
+
+        color: rgb(85, 72, 57);
+      }
+
+      .main_bor1:hover {
+        font-weight: bord;
+      }
+
+      /* 메인헤드부분 끝 */
+
+      .main_box1 {
+        width: 100%;
+
+        height: 150px;
+
+        /* border: 1px solid blue; */
+      }
+
+      footer {
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        /* align-items:flex-end; */
+
+        width: 100%;
+
+        height: 80px;
+
+        background-color: rgb(114, 38, 38);
+
+        color: white;
+
+        text-align: center;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        position: absolute;
+
+        bottom: 0;
+      }
+
+      .footer_fon {
+        display: flex;
+
+        justify-content: center;
+      }
+
+      .footer_fon1 {
+        font-weight: bold;
+      }
+      .stand{
+        display:flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 80px;
+        padding: 5px;
+        /* bottom:0; */
+        /* margin-top: 20px; */
+        background-color: burlywood;
+        width: 100vw;
+        min-width: 1003px;
+      }
+      .stand img{
+        border: 1px solid rgb(82, 82, 82);
+        margin-left: 20px;
+      }
+    </style>
+</head>
+
+<div class="header2">
+    <div class="header_box">
+      <div class="header_fon1">NEWS</div>
+      <div class="header_fon2">STAND</div>
+      <div class="header_fon3">
+        뉴스스탠드 기사는 각 언론사에서 직접합니다.
+      </div>
+    </div>
+
+    <nav>
+      <button class="header_bor">MY뉴스</button
+      ><button class="header_bor">전체 언론사</button>
+    </nav>
+
+    <div class="header_box1">
+      <button class="bor">로그인</button>
+
+      <div class="img">
+        <img src="images/메뉴.png" width="30px" />
+      </div>
+
+      <div class="header_fon4">|</div>
+
+      <div class="img1">
+        <img src="images/화살표.png" width="20px" />
+      </div>
+
+      새로고침
+
+      <div class="header_fon4n">|</div>
+      <div class="img2">
+        <img src="images/설정.png" width="20px" />
+      </div>
+
+      설정
+      <div class="header_fon4">|</div>
+      NAVER
+    </div>
+</div>
+
+<main>
+    <div class="main_sub">
+      <div class="main_box">
+        <button class="main_bor">주요언론사</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor">종합/경제</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor">방송/통신</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor1">IT</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor">영자지</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor">주요언론사</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor">스포츠/연애</button>
+        <div class="main_fon">|</div>
+
+        <button class="main_bor1">지역</button>
+      </div>
+
+      <div class="main_box1"></div>
+    </div>
+</main>
+
+<body>
+    <div class="center-container">
+        <div class="wrap">
+            <div class="container">
+                <section>
+                    <header>
+                        <div class="header-wrapper">
+                            <div class="header-left-content-wrapper">
+                                <div class="daily">
+                                    <a href="https://world.kbs.co.kr/service/index.htm?lang=e">
+                                        <img src="images/kbsworld.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="button">
+                                    <button>구독하기</button>
+                                    <button>이용자 한마디</button>
+                                </div>
+                            </div>
+                            <div class="banner">
+                                <a href="https://contents.premium.naver.com/">
+                                    <img src="images/배너.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    <div class="main">
+                        <div class="left">
+                            <a href="http://world.kbs.co.kr/service/news_view.htm?lang=e&id=Sp&Seq_Code=183429"><img src="images/기사사진1.png" alt=""></a>
+                            <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=e&id=IK&Seq_Code=183430">N. Korea Says Hwasal-2 Strategic <br> Cruise Missile Launched on Tuesday</a>
+                                 <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=e&id=Po&Seq_Code=183424">Yoon Vetoes Special Itaewon Probe <br> Bill,
+                                Gov’t Offers Remedial Recourse</a> <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=e&id=In&Seq_Code=183428">N. Korea Closes Diplomatic Mission <br>
+                                in Hong Kong, Libya</a>
+                        </div>
+                        <div class="center">
+                            <a href="http://world.kbs.co.kr/service/news_view.htm?lang=j&id=IK&Seq_Code=87263"><img src="images/기사사진2.png" alt=""></a>
+                            <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=j&id=Po&Seq_Code=87266">印鑑証明制度が導入から110年で改変<br>へデジタル印鑑に転換も</a> <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=j&id=Po&Seq_Code=87265">野党単独で可決の「梨泰院惨事特別法」<br> 政府が再議要求案を議決</a> <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=j&id=Dm&Seq_Code=87264">去年の外国人観光客1100万人 コロナ <br>
+                                禍前の６割に</a>
+                        </div>
+                        <div class="right">
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=c&id=Po&Seq_Code=81779"><img src="images/기사사진3.png" alt=""></a> <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=c&id=Po&Seq_Code=81789">韩国政府强烈抗议日本外相对独岛领<br>
+                                土主权的无理主张</a>
+                            <br>
+                                <a href="https://world.kbs.co.kr/service/news_view.htm?lang=c&id=Po&Seq_Code=81789">韩国政府强烈抗议日本外相对独岛领<br>土主权的无理主张</a>
+                            <br>
+                            <a href="https://world.kbs.co.kr/service/news_view.htm?lang=c&id=Ec&Seq_Code=81794">韩小工商户去年贷款利息下月5日 <br>起获退还</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="stand">
+        <div class="stand2"></div>
+            <a href=""><img src="images/신문사1.png" alt=""></a>
+            <a href=""><img src="images/신문사2.png" alt=""></a>
+            <a href=""><img src="images/신문사3.gif" alt=""></a>
+            <a href=""><img src="images/신문사4.png" alt=""></a>
+            <a href=""><img src="images/신문사5.gif" alt=""></a>
+            <a href=""><img src="images/신문사6.png" alt=""></a>
+            <a href=""><img src="images/신문사7.gif" alt=""></a>
+            <a href=""><img src="images/신문사8.gif" alt=""></a>
+            <a href=""><img src="images/신문사9.gif" alt=""></a>
+            <a href=""><img src="images/신문사10.png" alt=""></a>
+            <a href=""><img src="images/신문사11.gif" alt=""></a>
+            <a href=""><img src="images/신문사12.png" alt=""></a>
+            <a href=""><img src="images/신문사13.gif" alt=""></a>
+            <a href=""><img src="images/신문사14.png" alt=""></a>
+            <a href=""><img src="images/신문사 15.png" alt=""></a>
+        </div>
+    </div>
+    <footer>
+        본 콘텐츠의 저작권은 제공처 또는 네이버에 있으며, 이를 무단 이용하는
+        경우 저작권법 등에 따라 법적책임을 질 수 있습니다.<br />
+
+        <div class="footer_fon">
+          Copyright ⓒ
+          <div class="footer_fon1">NAVER Copr.</div>
+          All Rights Reserved
+        </div>
+      </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendar</title>
+<style>
+    body{
+    width: 700px;
+    margin: 0 auto;
+}
+header{
+    width: 680px;
+    background-color: rgb(112, 90, 249);
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+header h2{
+    text-align: center;
+    color: white;
+}
+header img, h2{
+    display: inline;
+}
+.img1{
+    float: left;
+    margin-top: 2px;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(112, 90, 249);   
+}
+.img2{
+    float: right;
+    margin-top: 5px;
+    width: 20px;
+    height: 20px;
+}
+section{
+    width: 700px;
+    display: flex;
+    border-right: 1px solid rgb(221, 221, 221);
+}
+.weekend{
+    height: 20px;
+    text-align: center;
+    font-size: small;
+    background-color: rgb(112, 90, 249);
+    color: white;
+}
+div{
+    width: 100px;
+    height: 100px;
+    border-bottom: 1px solid rgb(221, 221, 221) ;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: rgb(43, 177, 236);
+}
+</style>
+</head>
+<body>
+
+    <header>
+            <img class="img1" src="images/네이버_logo.jpg" onclick="window.close()">
+            <h2>2024.01</h2>
+            <a href="#"><img class="img2" src="images/메인_삼단바.png" alt=""></a>
+    </header>
+    <section>
+        <div class="weekend">SUN</div>
+        <div class="weekend">MON</div>
+        <div class="weekend">TUE</div>
+        <div class="weekend">WED</div>
+        <div class="weekend">THU</div>
+        <div class="weekend">FRI</div>
+        <div class="weekend">SAT</div>
+
+    </section>
+
+    <section>
+        <div></div>
+        <div class="red">1 새해첫날</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div class="blue">6</div>
+    </section>
+
+    <section>
+        <div class="red">7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div class="blue">13</div>
+    </section>
+
+    <section>
+        <div class="red">14</div>
+        <div>15</div>
+        <div>16</div>
+        <div>17</div>
+        <div>18</div>
+        <div>19</div>
+        <div class="blue">20</div>
+    </section>
+
+    <section>
+        <div class="red">21</div>
+        <div>22</div>
+        <div>23</div>
+        <div>24</div>
+        <div>25</div>
+        <div>26</div>
+        <div class="blue">27</div>
+    </section>
+    
+    <section>
+        <div class="red">28</div>
+        <div>29</div>
+        <div>30</div>
+        <div>31</div>
+        <div></div>
+        <div></div>
+        <div class="blue"></div>
+    </section>
+</body>
+</html>

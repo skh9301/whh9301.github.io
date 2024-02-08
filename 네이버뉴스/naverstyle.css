@@ -1,0 +1,1073 @@
+div{
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+}
+.head-menu{
+    width: 1280px;
+    margin: 10px auto;
+}
+.header{
+    z-index: 120;
+    position: relative;
+    height: 156px;
+    padding: 70px 0 42px;
+}
+.wrapper{
+    min-width: 1340px;
+}
+.right-nav{
+    position: absolute;
+    top: 18px;
+    right: 40px;
+
+}
+.menu-icon{
+    background-image: url(images/menuImage.png);
+    background-size:  contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+.pay-icon{
+    background-image: url(images/payImage.png);
+    background-size: contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+.notif-icon{
+    background-image: url(images/notif.png);
+    background-size:  contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+.talk-icon{
+    background-image: url(images/talk.png);
+    background-size:  contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    padding: 0 auto;
+    position: relative;
+    cursor: pointer;
+}
+.submit-search{
+    background-image: url(images/searchImage.png);
+    background-size: contain;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    
+}
+.menu-icon:hover{
+    background-color: lightgray;
+    border-radius: 50%;
+    border-color: transparent;
+    opacity: .5;
+}
+.pay-icon:hover{
+    background-color: lightgray;
+    border-radius: 50%;
+    border-color: transparent;
+    opacity: .5;
+}
+.search-area{
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    z-index: 10;
+    width: 703px;
+    border: 2px solid #03c75a;
+    border-radius: 50px;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+.search-group{
+    position: relative;
+    padding-left: 25px;
+    display:flex;
+    align-items: center;
+}
+.search-group:hover{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    border-radius: 50px;
+}
+.search-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.search-form{
+    display: flex;
+    align-items: center;
+}
+.search-input-box{
+    width: 470px;
+    background-color: #fff;
+}
+.search-input{
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    font-size: 21px;
+    background-color: #fff;
+
+}
+.keyboard{
+    margin: 0 auto;
+}
+.search-fieldset{
+    border: 0;
+    padding-top:7.8px;
+    padding-bottom: 7.8px;  
+}
+.left-nav{
+    position: absolute;
+    top: 18px;
+    left: -10px;
+}
+.left-nav-pay{
+    position: absolute;
+    top: 18px;
+    left: 50px;
+}
+.right-nav-talk{
+    position: absolute;
+    top: 18px;
+    right: 95px;
+}
+.root:after{
+    content: "";
+    display: block; clear: both;
+}
+.menu-icon{
+    padding: 10px;
+}
+.shortcut-area{
+    position: relative;
+    width: 676px;
+    margin: 85px auto 0;
+}
+.shortcut-list{
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+.shortcut-item{
+    position: relative;
+    display: block;
+    width: 64px;
+}
+.main-content{
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+.left-table-layout{
+    float: left;
+    width: 830px;
+}
+.banner{
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
+}
+.ad-board{
+    height: 130px;
+    z-index: 99;
+}
+.ad-frame{
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    line-height: 0;
+}
+.ad-image{
+    width: 832px;
+    height: 130px;
+    text-align: center;
+}
+.news-stand-wrap{
+    margin-top: 16px;
+    background-color: white;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0,0,0,.04);
+    padding-bottom: 5px;
+}
+/* .news-stand{
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    box-sizing: border-box;
+} */
+.news-stand-header{
+    display: flex;
+    padding: 18px 20px 17px;
+}
+ul, li{
+    list-style: none;
+}
+.ul-news-stand{
+    display: flex;
+}
+.news-stand-module{
+    position: relative;
+}
+.news-stand-tab{
+    position: relative;
+    display: inline-block;
+    line-height: 23px;
+    font-weight: 800;
+    vertical-align: top;
+    color: rgba(8, 8, 8, .5);
+    font-weight: bolder;
+}
+.news-stand-tab-text{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    font-size: 18px;
+}
+.news-stand-tab-text[aria-selected="false"]{
+    color: rgba(8, 8, 8, .5);
+}
+.news-stand-tab-text[aria-selected="true"]{
+    color: black;
+}
+.news-stand-tab-text-devider{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.news-stand-tab-text-devider::before{
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background-color: #d3d5d7;
+    margin: 9px 7px 0;
+    border-radius: 50%;
+    vertical-align: top;
+}
+.news-stand-module-event{
+    flex: none;
+    height: 19px;
+    margin: 2px 9px 2px auto;
+
+}
+.news-stand-subview{
+    background-color: #f5f7f8;
+    position: relative;
+    display: flex;
+    margin: 0 20px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    line-height: 26px;
+}
+.news-stand-mainview{
+    position: relative;
+    display: flex;
+    margin: 18px 20px 18px 20px;
+}
+.news-stand-link{
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    vertical-align: top;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+}
+.news-stand-home{
+    padding-left: 25px;
+    position: relative;
+    font-weight: bold;
+    color: inherit;
+    vertical-align: top;
+    cursor: pointer;
+    display: inline-block;
+}
+.news-stand-home::before{
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #d3d5d7;
+    top: 7px;
+    left: 12px;
+    width: 1px;
+    height: 12px;
+}
+.news-stand-subscription-frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* border: 1px solid #ebebeb; */
+}
+.sub-frame-row-line1{
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 56px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-row-line2{
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 112px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-row-line3{
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 168px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-column-line1{
+    left: 0;
+    right: 0;
+    width: 1px;
+    left: 132px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-column-line2{
+    left: 0;
+    right: 0;
+    width: 1px;
+    left: 263px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-column-line3{
+    left: 0;
+    right: 0;
+    width: 1px;
+    left: 394px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-column-line4{
+    left: 0;
+    right: 0;
+    width: 1px;
+    left: 526px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.sub-frame-column-line5{
+    left: 0;
+    right: 0;
+    width: 1px;
+    left: 657px;
+    background-color: var(--color_border_in);
+    z-index: 1;
+    position: absolute;
+}
+.news-stand-subscription-group{
+    border: 1px solid #ebebeb;
+    position: relative;
+    height: 222px;
+    border: 4px;
+    -webkit-box-flex: 1;
+}
+.news-icon-frame{
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px lightgray solid;
+    border-bottom: transparent;
+    border-right: transparent;
+    box-sizing: border-box;
+}
+.news-icon-frame-right{
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px lightgray solid;
+    border-bottom: transparent;
+
+    box-sizing: border-box;
+}
+.news-icon-frame-bottom{
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px lightgray solid;
+
+    border-right: transparent;
+    box-sizing: border-box;
+}
+.news-icon-frame-bottom-right{
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px lightgray solid;
+
+    box-sizing: border-box;
+}
+.news-sub-link{
+    padding: 18px 0;
+
+}
+.news-sub-link-image{
+    height: 20px;
+    border: 0;
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
+}
+.webtoon-content-wrap{
+    margin-top: 16px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
+    box-sizing: border-box;
+    padding-bottom: 17px;
+}
+.webtoon-content-header{
+    display: flex;
+    padding: 18px 20px 17px;
+}
+.webtoon-content-header-view{
+    flex: 1;
+}
+.webtoon-content-header-tab-list{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.webtoon-content-header-tab-item-first{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.webtoon-content-header-tab-item{
+    position: relative;
+    padding-left: 26px;
+    margin: 0;
+}
+.webtoon-content-header-tab-item-text-selected{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 23px;
+    font-weight: 800;
+    vertical-align: top;
+    color: #080808;
+    font-size: 18px;
+}
+.webtoon-content-header-tab-item-text{
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 23px;
+    font-weight: 800;
+    vertical-align: top;
+    color: rgba(8, 8, 8, .5);
+    font-size: 18px;
+}
+.webtoon-content-header-tab-item::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 13px;
+    width: 1px;
+    height: 16px;
+    background-color: #d3d5d7;
+    transform: skewX(-15deg);
+}
+.webtoon-feed-header{
+    background-color: #f5f7f8;
+    margin: 0 20px 18px 20px;
+    padding: 15px 20px 14px;
+    border-radius: 4px;
+    line-height: 21px;
+    white-space: nowrap;
+}
+.webtoon-feed-header-subview{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.webtoon-feed-header-subview-item{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.webtoon-feed-header-subview-item-text-sel{
+    color: #101010;
+    font-weight: bolder;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+}
+.webtoon-feed-header-subview-item-text{
+    padding-left: 18px;
+    color: #404040;
+    font-weight: bolder;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.webtoon-feed-header-subview-item-text::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 3px;
+    height: 3px;
+    background-color: #d3d5d7;
+    border-radius: 50%;
+}
+.webtoon-feed-area{
+    padding: 0 20px;
+}
+.webtoon-ad-area{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+.webtoon-ad-thumb-area{
+    height: 34px;
+    margin-right: 18px;
+    border-radius: 4px;
+    flex: none;
+    overflow: hidden;
+    position: relative;
+}
+.webtoon-ad-thumb-area::after{
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: inherit;
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.webtoon-ad-title{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 4px;
+    text-overflow: clip;
+    vertical-align: top;
+    line-height: 1.3334;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #101010;
+    letter-spacing: -.4px;
+}
+.webtoon-ad-context{
+    font-size: 14px;
+    letter-spacing: -.4px;
+    line-height: 1.3334;
+    text-overflow: clip;
+    color: #404040;
+    white-space: nowrap;
+
+}
+.webtoon-ad-content-area{
+    margin-right: 11px;
+    overflow: hidden;
+}
+.webtoon-ad-landing-area{
+    margin-right: -50px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -.4px;
+    line-height: 1.429;
+    max-width: 100%;
+    color: #606060;
+}
+.icon_svg{
+    margin-left: 6px;
+    margin: 4px 0 0 4px;
+    vertical-align: top;
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+.feed-box{
+    position: relative;
+}
+.webtoon-feed-area-title{
+    position: relative;
+    display: flex;
+}
+.webtoon-feed-area-title-strong{
+    display: block;
+    padding-bottom: 15px;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 800;
+}
+.six-column-webtoon-poster{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 4px -28px;
+    list-style: none;
+    padding: 0;
+}
+.six-column-webtoon-poster-item{
+    position: relative;
+    flex-shrink: 0;
+    width: 108.3333333333px;
+    padding: 0 0 20px 28px;
+    margin: 0;
+}
+.six-column-webtoon-poster-item-a{
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+.six-column-webtoon-poster-item-thumbnail{
+    position: relative;
+    display: block;
+}
+.webtoon-thumbnail-img-view{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    border-radius: 4px;
+}
+.webtoon-thumbnail-img-src::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: inherit;
+    transform: translate3d(0,0,0);
+    perspective: 1px;
+}
+.six-column-webtoon-poster-title{
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 40px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 10px;
+    font-weight: 500;
+    color: black;
+}
+.six-column-webtoon-poster-subtitle-wrap{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #606060;
+    margin-top: 4px;
+    line-height: 16px;
+    font-size: 14px;
+}
+.right-table-layout{
+    float: left;
+    width: 420px;
+    margin-left: 30px;
+}
+.right-content-table{
+    width: 420px;
+}
+.right-layout-module{
+    float: left;
+    width: 420px;
+}
+.login-content-area{
+    z-index: 10;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04);
+    box-sizing: border-box;
+}
+.login-view{
+    padding: 21px 20px 18px;
+    line-height: 20px;
+    text-align: center;
+}
+.login-view-text{
+    margin: 0;
+    padding: 0;
+}
+.login-button{
+    display: block;
+    margin-top: 13px;
+    padding: 17px 0;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 4px;
+    background-color: #03c75a;
+    box-shadow: 0 2px 4px 0 rgba(3, 199, 90, .12);
+    text-decoration: none;
+    color: #fff;
+}
+.naver-logo-login{
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.2b26eb67.png);
+    background-size: 434px 416px;
+    background-position: -120px -166px;
+    background-repeat: no-repeat;
+    width: 72px;
+    height: 14px;
+    display: inline-block;
+    margin: 3px 8px 0 0;
+    vertical-align: top;
+}
+.login-more{
+    color: #606060;
+    margin-top: 16px;
+    font-size: 1.3rem;
+}
+.login-more-search-id{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+}
+.login-more-search-pw{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+}
+.login-more-search-pw::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #d3d5d7;;
+    margin: 4px 12px 0;
+    vertical-align: top;
+}
+.login-more-join{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14px;
+}
+.login-more-join::before{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #d3d5d7;
+    margin: 4px 12px 0;
+    vertical-align: top;
+}
+.calender-content-area{
+    margin-top: 16px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    /* box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04); */
+    box-sizing: border-box;
+}
+.memo-content-area{
+    margin-top: 16px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    /* box-shadow: 0 0 0 1px #e3e5e8, 0 1px 2px 0 rgba(0, 0, 0, .04); */
+    box-sizing: border-box;
+}
+
+        /* 캘린더 위젯 */
+
+.calender-container{
+        border: 1px solid #e3e5e8;
+        border-radius: 8px;
+        padding: 20px 20px 0px 20px;
+    }
+.calender-header{
+        display: flex;
+        height: 40px;
+    }
+.img1{
+        position: relative;
+        left: 311px;
+    }
+.date{
+        display: flex;
+        align-items: flex-end;
+    }
+.week{
+        padding: 40px 10px 0px 10px;
+        margin: 0px 0px 7px 0px;
+    }
+.calendar-main{
+        display: flex;
+        margin-bottom: 16px;
+    }
+.sec2{
+        position: relative;
+        right: -102px;
+    }
+.C:link{
+        color: black;
+        text-decoration: none;
+    }
+.C:visited{
+        color: black;
+    }
+.month{
+        font-weight: 900;
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+/* 메모 위젯 */
+
+.mainmemo{
+        width: 390px;
+    }    
+.box1{
+        background-color: rgb(0, 191, 109);
+        border: 1px solid #e3e5e8;
+        color: white;
+        font-weight: bold;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        width: 405px;
+        height: 40px;
+        list-style: none;
+        padding: 7px;
+        line-height: 40px;
+    }   
+.M{
+    padding-left: 10px;
+}     
+.M:link{
+        text-decoration: none;
+        color: white;
+    }
+.M:visited{
+        color: white;
+    }
+.box2{
+        border: 1px solid #e3e5e8;
+        width: 405px;
+        height: 40px;
+        list-style: none;
+        padding: 7px;
+        line-height: 40px;
+    }
+.memostar{
+        margin-right: 10px;
+    }
+.box3{
+        border: 1px solid #e3e5e8;
+        width: 405px;
+        height: 40px;
+        list-style: none;
+        padding: 7px;
+        line-height: 40px;
+        border-top: transparent;
+    }
+.box4{
+        border: 1px solid #e3e5e8;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;      
+        width: 405px;
+        height: 40px;
+        list-style: none;
+        padding: 7px;
+        line-height: 40px;      
+        border-top: transparent;
+    }
+.memowrite{
+        border: 1px solid #e3e5e8;
+        float: right;
+        padding: 7px;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+.mainmemo-wrap{
+        margin: 0;
+        padding: 0;
+}
+/* move to top */
+.move-to-top{
+    position:fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 50;
+}
+.move-to-top-button-a{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, .15);
+    vertical-align: top;
+    cursor: pointer;
+}
+.blind-move-to-top::before{
+    background-image: url(https://pm.pstatic.net/resources/asset/sp_main.ae81c9d5.png);
+    background-size: 444px 434px;
+    background-position: -293px -384px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+/* footer */
+
+.footer{
+    border-top: 1px solid #ebebeb;
+    background-color: #f5f6f7;
+    width: 100%;
+}
+
+.footer-inner{
+    width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 78px;
+    display: block;
+}
+.footer-notice-area{
+    border-bottom: 1px solid #ebebeb;
+    overflow: hidden;
+    padding: 21px 0;
+    line-height: 17px;
+}
+.notice-box{
+    display: flex;
+}
+.notice-msg{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #404040;
+    display: block;
+    max-width: 600px;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+}
+.footer-corp-area{
+    width: 1280px;
+    margin: 0 auto;
+    padding-top: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+.list-corp{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-right: 17px;
+    vertical-align: top;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+.corp-item{
+    color: #404040;
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: top;
+    /* margin-right: 10px; */
+}
+.empty-list-item{
+    margin: 0;
+    padding: 0;
+}
+.empty-list-item::after{
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #d3d5d7;
+    margin: 0 10px;
+    vertical-align: -1;
+}
+.addr{
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 20px;
+}
