@@ -1,0 +1,79 @@
+<figure>
+            <div class="figure_box1">
+                <div class="figure_a">
+                    금융상품
+                    바로가기 > 
+                </div>
+                <div class="figure_b">
+                    
+                </div>
+            </div>
+            <div class="figure_box2">
+                <div class="figure_c">
+                </div>
+                <div class="figure_d">
+                    <div class="figure_d_a">
+                        <ul>
+                            <li class="figure_d_1">금융 사고예방</li>
+                            <li>금융 사고예방
+                                <P>각종 금융사기수법에 한층 강화된 다양한 전자 금융 사기에 방 서비로 안전한 인터넷뱅킹 사용이 가능합니다.</P>
+                            </li>
+                            <li>통장(카드) 매매 양도는 불법
+                                <p>고객님의 자산을 보호하고 금융 사기를 예바하기 위한 최선의 방법은 대포통장 근절입니다.</p>
+                            </li>
+                            <li>사진촬영QR스캔 절대금지
+                                <p>타인이 OTP/보안카드 번호를 요구 (2개 초과) 하는 경우는 금융사기이니 절대 응하지 마십시오.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="figure_d_b">
+                        <ul>
+                            <li class="figure_d_1">소비자권익 보호</li>
+                            <li>금융 감독원 바로가기</li>
+                            <li>미수령주식 찾아주기 캠페인</li>
+                            <li class="figure_d_2">비교조회서비스</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="figure_e">
+                    국민인증서 이미지
+                </div>
+            </div>
+            <div class="figure_box3">
+                <div class="figure_e">
+                    <div class="figure_e_1">KB국민은행 APP</div>
+                    <div class="figure_e_2"></div>
+                </div>
+                <div class="figure_f">
+                    <div class="figure_f_1">
+                        이미지들 뱅킹
+                    </div>
+                </div>
+            </div>
+
+        </figure>
+        <footer>
+            <div class="footer_a">
+                <div class="footer_a_1">
+                    이용상담 | 보안프로그램 | 사고신고 | 보호금융상품등록부 | 전자민원접수 |개인정보처리방침 | 신용정보활용체제 | 위치기반서비스 이용약관 | 경영공시
+                    그룹 내 고객정보 안내 | 스튜어십 코드
+                </div>
+            </div>
+            <div class="footer_b">
+                <div class="footer_b.1">
+                KB금융 그룹네트워크, 대표전화 1588-9999, 쳇봇/채팅/이메일상담(24시간), 비교조회서비스 
+                </div>
+                <div class="footer_b.2">
+                페북 인스타 유튜 블로그 (이미지)
+                </div>
+            </div>
+            <div class="footer_c">
+                <div class="footer_c.1">
+                <li>KB국민은행은 KB국민카드의 판매대리 중개업자입니다.</li>
+                <li class="footer_c.1_1">KB국민은행은 KB국민카드의 판매대리 중개업자입니다.</li>
+                </div>
+                <div class="footer_c.2">
+                (이미지)
+                </div>
+            </div>
+        </footer>

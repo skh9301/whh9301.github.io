@@ -1,0 +1,549 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+
+*{
+    margin:0 auto;
+    padding:0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.container{
+    width:100%;
+    height: 1700px;
+}
+.main_img{
+    width:100%;
+    height: 500px;
+    padding: 10px;
+    background-image: url(/개인적인연습/배경1.png) ;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color:rgb(222, 238, 252);
+}
+.menu_bar{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top:40px;
+    right: 50px;
+    border:1px solid;
+    border-radius: 20px;
+    background-color: white;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow:hidden;
+}
+/* 메뉴바 */
+.menu_bar img{
+    padding-top: 10px;
+}
+
+.menu_bar:hover{
+    width:50px;
+    height : 140px;
+    transition: 1s;
+}
+
+
+
+
+
+header{
+    /* border:1px solid green; */
+    width: 1200px;
+    height:40x;
+    display:flex;
+    
+    
+}
+.header_a{
+    /* border:1px solid black; */
+    height: 30px;
+    display: flex;
+    align-items: end;
+    margin-left: 90px
+}
+.header_b{
+    height: 30px;
+    width: 100px;
+}
+.header_c{
+    display:flex;
+    align-items: end;
+    font-size:14px;
+    height: 30px;
+    width: 650px;
+    padding-right:100px;
+    /* border:2px solid red; */
+}
+.header_c_3{
+    padding-right: 15px;
+    padding-left: 10px;
+    height: 20px;
+    display: flex;
+}
+.header_c_4{
+    border-right: 1px solid black;
+    padding-right: 15px;
+    padding-left: 10px;
+    height: 20px;
+    display: flex;
+}
+.header_c_1{
+    border-right: 1px solid black;
+    padding-right: 15px;
+    padding-left: 10px;
+    height: 20px;
+        
+}
+.header_c_2{
+    padding-right: 5px;
+    padding-left: 10px;
+    height: 20px;
+    
+}
+/* 기업/개인 드랍다운 */
+.header_c_a_1 ul{
+    background-color: white;
+    width: 80px;
+    border-top:2px solid yellow;
+    padding: 10px;
+    position: relative;
+    right: 30px;
+
+}
+
+.header_c_a_1 ul{
+    display:none;
+}
+.header_c_a_1:hover ul{
+    display: block;
+}
+
+
+
+.header_d_main{
+    width:1200px;
+    height: 60px;
+    /* border: 1px solid */
+}
+.header_d{
+    margin-top:15px;
+    margin-left: 150px;
+}
+.header_d button{
+    background-color: white;
+    border:1px solid rgb(231, 231, 231);
+    margin-right:-7px;
+    width: 70px;
+    height: 28px;
+}
+.header_e{
+    width: 1000px;
+    height: 320px;
+    margin-top: 20px;
+    /* border:1px solid; */
+}
+.header_fon1{
+    font-size: 23px;
+    margin-top:20px;
+    margin-left: 25px;
+    transition: 1s;
+    animation: fon1 1s ease-in;
+}
+
+.header_fon2{
+    font-size: 40px;
+    font-weight: bold;
+    /* margin:10px; */
+    margin-left: 25px;
+    margin-top: 5px;
+    transition: 1s;
+    animation: fon1 1s ease-in;
+}
+.header_fon3{
+    font-size: 18px;
+    margin-left:25px;
+    margin-top: 10px;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    animation: fon2 1s ease-in;
+}
+.header_fon4{
+    font-size: 18px;
+    margin-left:25px;
+    animation: fon2 1s ease-in;
+}
+
+/* 백이미지 폰트 에니메이션  */
+@keyframes fon1{
+    0%{opacity: 0; translate: 30px 0px ;}
+    70%{opacity: 1; translate: 0px 0px ;}
+    100%{opacity: 1; translate: 0px 0px ;}
+}
+@keyframes fon2{
+    0%{opacity: 0; translate: 30px 0px ;}
+    100%{opacity: 1; translate: 0px 0px ;}
+}
+
+
+
+.header_e_box{
+    display: flex;
+    align-items: center;
+    /* border:1px solid; */
+    width: 150px;
+    margin-top: 140px;
+    margin-left: 30px;
+}
+.header_box1{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(163, 163, 163);
+    margin-bottom: 5px;
+}
+.header_box2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(163, 163, 163);
+    margin-bottom: 5px;
+}
+.header_box1:hover{
+    /* transform: scalex(3); */
+    border-radius:10px;
+    width:30px;
+    transition: 2s;
+    background-color: gray;
+}
+.header_box2:hover{
+    /* transform: scalex(3); */
+    border-radius:10px;
+    width:30px;
+    transition: 2s;
+    background-color: gray;
+}
+section{
+    width: 980px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    /* border:1px solid; */
+    /* position: relative;
+    top:-40px; */
+    margin-top:30px;
+    box-shadow: 8px 5px 40px  rgb(221, 221, 221);
+}
+.section_a{
+    width: 350px;
+    height: 70px;
+    padding-left: 25px;
+    background-color: rgb(255, 201, 54);
+    word-spacing:28px; /* 글자간격 띄워줌*/
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+.section_b{
+    width: 700px;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+}
+.section_b_1{
+    border-right:1px solid rgb(177, 177, 177); 
+    padding-right:20px;
+    padding-left:20px;
+    
+}
+.section_b_2{
+    padding-right:20px;
+    padding-left:20px;
+
+}
+.mid{
+    /* border:1px solid; */
+    width: 980px;
+    margin-top:60px;
+    display: flex;
+    
+}
+.mid_a{
+    height: 150px;
+    width: 84px;
+    /* border: 1px solid; */
+    line-height: 40px;
+    margin-top:5px;
+}
+.mid_b{
+    height: 150px;
+    width: 320px;
+    line-height: 40px;
+    color: gray;
+    /* border: 1px solid; */
+}
+.mid_c{
+    height: 150px;
+    width: 90px;
+    line-height: 40px;
+    color: gray;
+}
+.mid_d{
+    height: 150px;
+    width: 60px;
+    word-spacing:30px;
+    line-height: 40px;
+    color: gray;
+
+}
+.mid a{
+    text-decoration: none;
+    color:gray
+}
+
+.bottom{
+    border-bottom:2px solid;
+    width: 1040px;
+    height: 300px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+.bottom_ul{
+    width: 4000px;
+    height: 350px;
+    list-style:none;
+    position:relative;
+    animation: slideAni 20s infinite ease-in-out;
+}
+.bottom_li{
+    width:500px;
+    height: 390px;
+    float:left;
+}
+
+/* fingure 시작 */
+
+figure{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+.figure_box1{
+    display:flex;
+    margin-top: 15px;
+    width: 980px;
+    
+}
+.figure_a{
+    font-size: 16px;
+    margin-top: 40px;
+}
+.figure_b{
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+/* figure 회색줄 라인 */
+.figure_box2{
+    width: 100%;
+    height: 370px;
+    background-color: rgb(241, 241, 241);
+}
+.figure_d{
+    margin-top: 70px;
+    width: 1100px;
+    height: 250px;
+    display:flex;
+}
+.figure_d_a{
+    text-align: left;
+    /* border:2px solid; */
+    
+}
+table{
+    width: 100%;
+}
+.figure_d_1{
+    width: 170px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top:20px;
+}
+
+.figure_d_2{
+    width: 200px;
+    padding-top:20px;
+}
+.figure_d_3{
+    width: 250px;
+    padding-top:20px;
+}
+
+.figure_d_4{
+    width: 240px;
+    padding-top:20px;
+}
+.figure_d_5{
+    width: 160px;
+    font-size: 12px;
+    color: rgb(92, 92, 92);
+    
+}
+.figure_d_6{
+    width: 230px;
+    font-size: 12px;
+    margin-bottom: 35px;
+    color: rgb(92, 92, 92);
+}
+.figure_d_7{
+    width: 200px;
+    font-size: 12px;
+    color: rgb(92, 92, 92);
+    margin-bottom:20px;
+}
+.top_line{
+    margin-bottom: 50px;
+}
+.top_line1{
+    border-top:1px solid;
+}
+.figure_d_c{
+    margin-bottom:10px;
+}
+
+/* figure_box3 */
+/* 국민은행 앱  */
+.figure_box3{
+    width: 100%;
+    height: 600px;
+}
+.figure_e{
+    height: 250px;
+    width: 1100px;
+    margin: 0 auto;
+}
+.figure_e_1{
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color:rgb(70, 70, 70);
+    font-weight: bold;
+}
+.figure_e_2{
+    margin-left: 40px;
+}
+/* 국민은행 맨 하단  */
+
+.figure_f{
+    width: 1100px;
+    margin-top: 30px;
+}
+.figure_text{
+    background-image: url(/개인적인연습/말.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: 5px;
+    width: 185px;
+    padding-left:20px;
+    border:1px solid;
+    /* padding-top:5px; */
+    /* padding-bottom:5px; */
+}
+.figure_text1{
+    width: 100px;
+    text-align: center;
+}
+.figure_f{
+    font-size: 13px;
+    
+}
+.figure_f_4 img{
+    position: relative;
+    top: -20px;
+    right: -320px;
+}
+.figure_f_2 img{
+    position: relative;
+    top: 20px;
+    right: -150px;
+}
+
+
+/* 광고라인 */
+/* 광고 애니메이션 */
+@keyframes slideAni{
+    0%{left: 0px;}
+    33%{left: -720px;}
+    66%{left: -720px;}
+    66%{left:-1460px;}
+    100%{left:-1460px;}
+}
+
+.bottom_li:nth-child(1){
+    background: url(/개인적인연습/배너1.png );
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+}
+.bottom_li:nth-child(2){
+    background: url(/개인적인연습/배너2.png);
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+}
+.bottom_li:nth-child(3){
+    background: url(/개인적인연습/배너3.png);
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+}
+.bottom_li:nth-child(4){
+    background: url(/개인적인연습/배너4.png);
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+}
+.bottom_li:nth-child(5){
+    background: url(/개인적인연습/배너5.png);
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+}
+.bottom_li:nth-child(6){
+    background: url(/개인적인연습/배너6.png);
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+}
+.bottom_li:nth-child(7){
+    background: url(/개인적인연습/배너7.png);
+    background-size: 330px;
+    background-repeat: no-repeat;
+    width:300px;
+    height: 300px;
+    padding:30px;
+    
+}
+
+
+
+
