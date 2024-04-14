@@ -1,0 +1,53 @@
+package study.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import study.board.Board;
+import study.dao.BoardDao;
+
+@WebServlet
+public class BoardUpdateController extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		req.setCharacterEncoding("utf-8");
+		
+		String sNo = req.getParameter("no");
+		String pass =req.getParameter("pass");
+		
+		BoardDao dao = new BoardDao();
+		boolean isPassCheck = dao.isPassCheck(Integer.parseInt(sNo), pass);
+		
+		if(!isPassCheck) {
+			resp.setContentType("text/html; charset=utf-8;");
+			PrintWriter out = resp.getWriter();
+			out.println("<scipt>");
+			out.println("alert('비밀번호가 틀립니다.')");
+			out.println("history.back();");
+			out.println("<script>");
+			out.close();
+			return;
+		}
+		String title = req.getParameter("title");
+		String writer = req.getParameter("writer");
+		String content = req.getParameter("content");
+		Board b = new Board();
+		b.setNo(Integer.parseInt(sNo));
+		b.setTitle(title);
+		b.setWriter(writer);
+		b.setPass(pass);
+		b.setContent(content);
+		
+		dao.updateBoard(b);
+		
+		resp.sendRedirect("board");
+	}
+}
+
