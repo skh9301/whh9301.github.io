@@ -79,7 +79,7 @@
 			<c:forEach var="board" items="${list }">
 				<tr>
 					<td class="text-center">${board.no }</td>
-					<td><a href="boardDetail?no=${board.no} class="text-decoration-none link-secondary">${board.title}</a></td>
+					<td><a href="boardDetail?no=${board.no}">${board.title}</a></td>
 					<td class="text-center">${board.writer}</td>
 					<td class="text-center">${board.regDate}</td>
 					<td class="text-center">${board.readCount}</td>
