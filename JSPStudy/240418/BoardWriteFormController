@@ -1,0 +1,38 @@
+package com.jspstudy.bbs.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/writeForm")
+public class BoardWriteFormController extends HttpServlet {
+
+	// get 방식의 요청을 처리하는 메소드
+	protected void doGet(
+			HttpServletRequest request, HttpServletResponse response)
+					throws ServletException, IOException {
+		
+		  String pageNum = request.getParameter("pageNum");
+		  
+			 if( pageNum == null || pageNum.equals("")) {
+			  response.setContentType("text/html; charset=utf-8"); PrintWriter out =
+			 response.getWriter(); out.println("<script>");
+			  out.println("	alert('잘못된 접근입니다.');"); out.println("	history.back();");
+			  out.println("</script>"); return; }
+			 
+			
+
+			
+			request.setAttribute("pageNum", pageNum);
+		
+		RequestDispatcher rd = 
+				request.getRequestDispatcher("/WEB-INF/board/writeForm.jsp");
+		rd.forward(request, response);
+	}
+}
