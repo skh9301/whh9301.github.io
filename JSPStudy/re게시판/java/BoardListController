@@ -1,0 +1,30 @@
+package com.study.controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.study.bbs.Board;
+import com.study.dao.BoardDao;
+
+@WebServlet("/boardList")
+public class BoardListController extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			BoardDao bdo = new BoardDao();
+		
+			List bList =  bdo.getList();
+		req.setAttribute("bList", bList);
+		RequestDispatcher rd = 
+				req.getRequestDispatcher("/WEB-INF/BoardList.jsp");
+		rd.forward(req, resp);
+		
+	}
+}
