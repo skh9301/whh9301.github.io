@@ -1,0 +1,41 @@
+package com.study.controller;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.study.bbs.Board;
+import com.study.dao.BoardDao;
+
+@WebServlet("/writeProcess")
+public class BoardWriteController extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		// 포스트 문자셋
+		req.setCharacterEncoding("utf-8");
+		
+		String title = req.getParameter("title");
+		String writer = req.getParameter("writer");
+		String pass = req.getParameter("pass");
+		String content = req.getParameter("content");
+		
+		Board board = new Board();
+		board.setTitle(title);
+		board.setWriter(writer);
+		board.setPass(pass);
+		board.setContent(content);
+		
+		BoardDao dao = new BoardDao();
+		dao.insertBoard(board);
+		
+		resp.sendRedirect("boardList");
+	}
+}
