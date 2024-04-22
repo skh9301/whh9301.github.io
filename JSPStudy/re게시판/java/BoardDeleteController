@@ -1,0 +1,48 @@
+package com.study.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.study.bbs.Board;
+import com.study.dao.BoardDao;
+
+@WebServlet("/deleteProcess")
+public class BoardDeleteController extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		// 포스트 문자셋
+		req.setCharacterEncoding("utf-8");
+		
+		
+		int no=Integer.parseInt(req.getParameter("no"));
+		String pass=req.getParameter("pass");
+		
+		BoardDao dao = new BoardDao();
+		boolean isPassCheck = dao.isPassCheck(no, pass);
+		
+		if(! isPassCheck) {
+			resp.setContentType("text/html; charset=utf-8");
+			PrintWriter out = resp.getWriter();
+			out.println("<script>");
+			out.println("alert('비밀번호가 맞지 않습니다.')");
+			out.println("history.back();");
+			out.println("</script>");
+			
+			return;
+		}
+		
+		dao.deleteBoard(no);
+		
+		resp.sendRedirect("boardList");
+	}
+}
