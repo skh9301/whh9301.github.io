@@ -8,81 +8,71 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<meta name="viewport" content="width=device=width, initial-scale-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-	<!-- 헤더-->
-	<div class="row border-bottom border-primary">
-		<div class="col-4">
-			<p><img src="https://via.placeholder.com/200x100"></p>
-		</div>
-		<div class="col-8">
-			<div class ="row">
-				<div class="col">
-					<ul class="nav justify-content-end">
-						<li class = "nav-item">
-							<a class="nav-link" href="#">로그인</a>
-						</li>	
-						<li class="nav-item">
-							<a class="nav-link" href="#">게시글 리스트</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">회원가입</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">주문/배송조회</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">고객센터</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">게시글 리스트</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div  class="row">
-				<div class= "col text-end">로그인시 인사말 출력</div>
-			</div>
-		</div>
-	</div>
-	
+	<!-- 헤더 -->
+	<%@ include file="./page/header.jsp" %>
 	<!-- 바디-->
 		<div class="row my-3">
 			<div class="col-3"></div>
 			<div class="col-6 text-center ">
-				<h2>게시판 리스트</h2>
+				<h2 class="fs-3 fw-bold">게시판 리스트</h2>
 			</div>
 			<div class="col-3"></div>
 		</div>
-		<div class="row my-3">
 			<div class="col text-end">
 				<a href="writeForm" class="btn btn-outline-success">글쓰기</a>
 			</div>
-		</div>
 	</div>
-	<div class="row">
+	
+	<form name="searchForm" id="searchFrom" action="#" class="row justify-content-center my-3">
+		<div class="col-auto">
+			<select name="type" class="form-select">
+				<option valus="title">제목</option> 
+				<option valus="writer">작성자</option> 
+				<option valus="content">내용</option> 
+			</select>
+		</div>
+		<div class="col-4">
+			<input type="text" name="keyword" class="form-control" id="keyword">
+		</div>
+		<div class= "col-auto">
+			<input type="submit" value="검 색" class="btn btn-primary">
+		</div>			
+	
+	<div class="row my-5">
 		<div class="col-2"></div>
 		<div class="col-8">
-			<table class="table">
-				<tr class="text-center">
+			<table class="table table-hover">
+				<thead>
+				<tr class="table-dark text-center">
 					<th>no</th>
 					<th>제목</th>
 					<th>작성자</th>
 					<th>작성날짜</th>
 					<th>조회수</th>
 				</tr>
+				</thead>
+				<tbody class="text-secondary"></tbody>
+				<c:if test="${not empty bList }">
 				<c:forEach var="list" items="${bList }">
 				<tr >
 					<th class="text-center">${list.no }</th>
-					<th >${list.title }</th>
+					<th><a href="boardDetail?no=${list.no}" class="text-decoration-nonelink-secondary">${list.title }</a></th>
 					<th class="text-center">${list.writer }</th>
 					<th class="text-center"><fmt:formatDate value="${ list.regDate }" pattern="yyyy-MM-dd HH:mm"/></th>
 					<th class="text-center">${list.readCount }</th>
 				</tr>
 				</c:forEach>
+				</c:if>
+				<c:if test="${empty bList }">
+					<tr>
+						<td colspan="5">게시글이 존재하지 않습니다.</td>
+					</tr>
+				</c:if>
 			</table>
 		</div>
 		<div class="col-2"></div>
