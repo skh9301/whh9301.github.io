@@ -1,0 +1,50 @@
+package com.study.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+
+import javax.naming.NamingException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.study.bbs.Board;
+import com.study.dao.BoardDao;
+
+@WebServlet("/updateForm")
+public class BoardUpdateFormController extends HttpServlet {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		// 문자셋
+		req.setCharacterEncoding("utf-8");
+		
+		String sNo= req.getParameter("no");
+		String pass = req.getParameter("pass");
+		
+		BoardDao dao = new BoardDao();
+		int no = Integer.parseInt(sNo);
+		boolean isPassCheck = dao.isPassCheck(no,pass);
+		
+		if(!isPassCheck) {
+			resp.setContentType("text/html; charset=utf-8");
+			PrintWriter out = resp.getWriter();
+			out.println("<script>");
+			out.println("alert('비밀번호가 다릅니다')");
+			out.println("history.back();");
+			out.println("</script>");
+			out.close();
+			return;
+		}
+		
+		Board board = dao.getBoard(no);
+		req.setAttribute("board",  board);
+		RequestDispatcher rd =
+				req.getRequestDispatcher("/WEB-INF/updateForm.jsp");
+		rd.forward(req, resp);
+	}
+}
