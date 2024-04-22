@@ -1,0 +1,227 @@
+package com.study.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import com.study.bbs.Board;
+
+public class BoardDao {
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private ResultSet rs;
+	private DataSource ds;
+	
+	
+	public BoardDao()  {
+		 try {
+		        Context initContext = new InitialContext();
+		        Context envContext = (Context) initContext.lookup("java:/comp/env");
+		        ds = (DataSource) envContext.lookup("jdbc/bbsDBPool");
+		    } catch (NamingException e) {
+		        // NamingException 발생 시 예외 처리 추가
+		        e.printStackTrace(); // 예외 정보 출력 또는 로깅
+		    }
+	}
+	
+	public List<Board> getList(){
+		List<Board> bList = new ArrayList<Board>();
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement("select * from jspbbs order by no desc");
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				  Board b = new Board();
+				  b.setNo(rs.getInt("no"));
+				  b.setWriter(rs.getString("writer"));
+				  b.setTitle(rs.getString("title"));
+				  b.setContent(rs.getString("content"));
+				  b.setRegDate(rs.getTimestamp("reg_date"));
+				  b.setReadCount(rs.getInt("read_count"));
+				  b.setPass(rs.getString("pass"));
+				  b.setFile1(rs.getString("file1"));
+				  
+				  bList.add(b);
+			}
+			
+			if(rs!=null) {rs.close();}
+			if(pstmt!=null) {pstmt.close();}
+			if(conn!=null) {conn.close();}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bList;
+	}
+	
+	// no에 해당하는 게시글을 DB에서 읽어와 Board객체로 반환하는 메서드
+	
+	public Board getBoard(int no) {
+			String sqlBoard = "select * from jspbbs where no=?";
+			Board b = null;
+			List bList = new ArrayList<Board>();
+			try {
+				conn = ds.getConnection();
+				pstmt = conn.prepareStatement(sqlBoard);
+				pstmt.setInt(1, no);
+				rs = pstmt.executeQuery();
+				while(rs.next()){
+					  b = new Board();
+					  b.setNo(rs.getInt("no"));
+					  b.setWriter(rs.getString("writer"));
+					  b.setTitle(rs.getString("title"));
+					  b.setContent(rs.getString("content"));
+					  b.setRegDate(rs.getTimestamp("reg_date"));
+					  b.setReadCount(rs.getInt("read_count"));
+					  b.setPass(rs.getString("pass"));
+					  b.setFile1(rs.getString("file1"));
+					  
+				  bList.add(b);
+			}
+			}catch(SQLException e) {
+			
+			}finally {
+				try {
+					if(rs!=null) {rs.close();}
+					if(pstmt!=null) {pstmt.close();}
+					if(conn!=null) {conn.close();}
+				}catch(SQLException e) {}
+			}
+			return b;
+	}
+	
+	// 게시판 추가 인서트
+	public void insertBoard(Board board) {
+		String sqlInsert = "insert into jspbbs(no,title,writer,content,reg_date,read_count,pass,file1)"
+								+"values (jspbbs_seq.nextval,?,?,?,sysdate,0,?,?)";
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(sqlInsert);
+			pstmt.setString(1, board.getTitle());
+			pstmt.setString(2, board.getWriter());
+			pstmt.setString(3, board.getContent());
+			pstmt.setString(4, board.getPass());
+			pstmt.setString(5, board.getFile1());
+			
+			
+			pstmt.executeUpdate();
+		}catch(Exception e) {
+			
+		}finally {
+			try {
+				if(rs!=null) {rs.close();}
+				if(pstmt!=null) {pstmt.close();}
+				if(conn!=null) {conn.close();}
+			}catch(SQLException e) {}
+		}
+	}
+	
+	// 비밀번호가 맞는 지 확인하는 메서드
+	
+	public boolean isPassCheck(int no ,String pass) {
+		boolean isPass = false;
+		String sqlPass = "select pass from jspbbs where no=?";
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(sqlPass);
+			pstmt.setInt(1, no);
+			
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				isPass= rs.getString(1).equals(pass);
+			}
+		}catch(Exception e) {
+			
+		}finally {
+			try {
+				if(rs!=null) {rs.close();}
+				if(pstmt!=null) {pstmt.close();}
+				if(conn!=null) {conn.close();}
+			}catch(SQLException e) {}
+		}
+		return isPass;
+	}
+	
+	// 글을 수정하는 메서드 추가
+	
+	  public void updateBoard(Board board) { 
+		  String sqlUpdate =
+					  "UPDATE jspbbs set title=?, writer=?, content=?," +
+					  " reg_date=sysdate, file1=? WHERE no=?";
+	  
+	  try { 
+		  conn = ds.getConnection(); 
+		  pstmt = conn.prepareStatement(sqlUpdate);
+		  pstmt.setString(1, board.getTitle()); 
+		  pstmt.setString(2, board.getWriter());
+		  pstmt.setString(3, board.getContent()); 
+		  pstmt.setString(4, board.getFile1());
+		  pstmt.setInt(5, board.getNo());
+		  
+	  
+	  pstmt.executeUpdate(); 
+	  }catch(Exception e) {
+	  
+	  }finally { 
+		  try {
+			  if(pstmt!=null) {pstmt.close(); } 
+			  if(conn!=null)  {conn.close();} 
+		 }catch(SQLException e) {} } 
+	  }
+	 
+	/*
+	 * public void updateBoard(Board board) {
+	 *  String sqlUpdate = "UPDATE jspbbs set title=?, writer=?, content=?," +
+	 * " reg_date=SYSDATE, file1=? WHERE no=?"; 
+	 * try { 
+	 * conn = ds.getConnection();
+	 * pstmt = conn.prepareStatement(sqlUpdate); 
+	 * pstmt.setString(1, board.getTitle()); 
+	 * pstmt.setString(2, board.getWriter()); 
+	 * pstmt.setString(3, board.getContent());
+	 *  pstmt.setString(4, board.getFile1());
+	 *   pstmt.setInt(5, board.getNo());
+	 *    pstmt.executeUpdate();
+	 *     }  catch(Exception e) { }
+	 *      finally { 
+	 *      try { if(pstmt != null) pstmt.close(); 
+	 *      if(conn != null) conn.close(); 
+	 *      
+	 *      }
+	 *catch(SQLException se) {} } 
+	 *} // end updateBoard(Board board);*/
+	
+	//글을 삭제하는 메서드 추가
+	
+	public void deleteBoard(int no) {
+		String sqlDelete = "delete from jspbbs where no=?";
+		
+		try {
+			conn = ds.getConnection();
+			pstmt = conn.prepareStatement(sqlDelete);
+			pstmt.setInt(1, no);
+			
+			
+			pstmt.executeUpdate();
+		}catch(Exception e) {
+			
+		}finally {
+			try {
+				if(rs!=null) {rs.close();}
+				if(pstmt!=null) {pstmt.close();}
+				if(conn!=null) {conn.close();}
+			}catch(SQLException e) {}
+		}
+	}
+}
