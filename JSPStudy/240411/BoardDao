@@ -142,5 +142,5 @@ public class BoardDao {
 		return bList;
 	} // end boardList()
 	
-	
+	11
 }
